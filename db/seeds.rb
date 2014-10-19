@@ -20,6 +20,8 @@ iPhone5 = PhoneModel.create!(name: 'iPhone 5')
 iPhone5s = PhoneModel.create!(name: 'iPhone 5s')
 nexus = PhoneModel.create!(name: 'Nexus 4')
 
-Repair.create!(phone_model: e51, client_id: kowalski, status: 'send to main service', emei: 54867598659, serviceman_id: 1, description: 'change soft', max_price: 300, costst: 150, price: 250, deadline: Time.now + 1.week )
-Repair.create!(phone_model: iPhone5, client_id: zbyszkowski, status: 'fixed', emei: 54895598659, serviceman_id: 1, description: 'simlock', price: 150, deadline: Time.now + 3.day )
-Repair.create!(phone_model: nexus, client_id: potter, status: 'in repair', emei: 86594331525, serviceman_id: 1, description: 'soft, screen', price: 400, deadline: Time.now + 5.day )
+Repair.create!(phone_model: e51, client_id: kowalski.id, status: 'send to main service', imei: 54867598659, serviceman_id: 1, description: 'change soft', max_price: 300, costs: 150, price: 250, deadline: Time.now + 1.week )
+Repair.create!(phone_model: iPhone5, client: zbyszkowski, status: 'fixed', imei: 54895598659, serviceman_id: 1, description: 'simlock', price: 150, deadline: Time.now + 3.day )
+Repair.create!(phone_model: nexus, client: potter, status: 'in repair', imei: 86594331525, serviceman_id: 1, description: 'soft, screen', price: 400, deadline: Time.now + 5.day )
+
+#client: potter     // LEPSZE  - przekazanie całego obiektu, a nie tylko jego id
