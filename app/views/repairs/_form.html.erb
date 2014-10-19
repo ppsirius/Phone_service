@@ -1,0 +1,6 @@
+<%= simple_form_for(@repair) do |repair| %>
+  <%= repair.association :client, label_method: :full_name, placeholder: "Client" %>
+  <%= repair.association :phone_model, placeholder: "Car" %>
+ 
+  <%= repair.button(:submit) %>
+<% end %>

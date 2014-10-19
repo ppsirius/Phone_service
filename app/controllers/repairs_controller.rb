@@ -9,6 +9,10 @@ class RepairsController < ApplicationController
   end
 
   def new
+    @repair = Repair.new
+  end
+
+  def create
     @repair = Repair.new(repair_params)
 
     if @repair.save

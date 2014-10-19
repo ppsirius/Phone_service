@@ -45,3 +45,4 @@ gem 'pg', group: :production
 
 gem 'rails_12factor', group: :production
 gem 'state_machine'
+gem 'simple_form'
