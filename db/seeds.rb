@@ -20,14 +20,9 @@ iPhone5 = PhoneModel.create!(name: 'iPhone 5')
 iPhone5s = PhoneModel.create!(name: 'iPhone 5s')
 nexus = PhoneModel.create!(name: 'Nexus 4')
 
-#test = Repair.new(phone_model: e51, client_id: kowalski.id, imei: 54867598659, serviceman_id: 1, description: 'change soft', max_price: 300, costs: 150, price: 250, deadline: Time.now + 1.week)
-#p test
-#Repair.create!(phone_model: e51, client_id: kowalski.id, status: 'send to main service', imei: 54867598659, serviceman_id: 1, description: 'change soft', max_price: 300, costs: 150, price: 250, deadline: Time.now + 1.week )
-#Repair.create!(phone_model: iPhone5, client: zbyszkowski, status: 'fixed', imei: 54895598659, serviceman_id: 1, description: 'simlock', price: 150, deadline: Time.now + 3.day )
-Repair.create!(phone_model: nexus, client: potter, imei: 86594331525, serviceman_id: 1, description: 'soft, screen', price: 400, deadline: Time.now + 5.day )
 
-test = Repair.new(phone_model: nexus, client: potter, imei: 86594331525, serviceman_id: 1, description: 'soft, screen', price: 400, deadline: Time.now + 5.day )
-p test
-p test.valid?
+Repair.create!(phone_model: e51, client_id: kowalski.id, status: :sent_to_service, imei: 54867598659, serviceman_id: 1, description: 'change soft', max_price: 300, costs: 150, price: 250, deadline: Time.now + 1.week )
+Repair.create!(phone_model: iPhone5, client: zbyszkowski, status: :fixed, imei: 54895598659, serviceman_id: 1, description: 'simlock', price: 150, deadline: Time.now + 3.day )
+Repair.create!(phone_model: nexus, client: potter, imei: 86594331525, serviceman_id: 1, description: 'soft, screen', price: 400, deadline: Time.now + 5.day )
 
 #client: potter     // LEPSZE  - przekazanie całego obiektu, a nie tylko jego id
