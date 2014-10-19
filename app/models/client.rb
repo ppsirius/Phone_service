@@ -1,4 +1,7 @@
 class Client < ActiveRecord::Base
+
+  has_many :repairs
+  
   validates :last_name, presence: true
   validates :first_name, presence: true
   validates :phone_number, presence: true
