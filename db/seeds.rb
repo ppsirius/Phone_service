@@ -5,3 +5,21 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Client.delete_all
+PhoneModel.delete_all
+Repair.delete_all
+
+kowalski = Client.create!(last_name: 'Kowalski', first_name: 'Jan', phone_number: 506654584, email: 'jankowalski@onet.pl')
+zbyszkowski = Client.create!(last_name: 'Zbyszkowski', first_name: 'Zbyszek', phone_number: 652865459, email: 'zbyszkowski@wp.pl')
+gienkowski = Client.create!(last_name: 'Gienkowski', first_name: 'Gienek', phone_number: 756894568, email: 'gienkowski@gmail.com')
+potter = Client.create!(last_name: 'Potter', first_name: 'Harry', phone_number: 888777555, email: 'potter@gryfindor.com')
+
+e51 = PhoneModel.create!(name: 'NOKIA E51')
+iPhone5 = PhoneModel.create!(name: 'iPhone 5')
+iPhone5s = PhoneModel.create!(name: 'iPhone 5s')
+nexus = PhoneModel.create!(name: 'Nexus 4')
+
+Repair.create!(phone_model: e51, client_id: kowalski, status: 'send to main service', emei: 54867598659, serviceman_id: 1, description: 'change soft', max_price: 300, costst: 150, price: 250, deadline: Time.now + 1.week )
+Repair.create!(phone_model: iPhone5, client_id: zbyszkowski, status: 'fixed', emei: 54895598659, serviceman_id: 1, description: 'simlock', price: 150, deadline: Time.now + 3.day )
+Repair.create!(phone_model: nexus, client_id: potter, status: 'in repair', emei: 86594331525, serviceman_id: 1, description: 'soft, screen', price: 400, deadline: Time.now + 5.day )
