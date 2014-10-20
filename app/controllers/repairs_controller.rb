@@ -10,6 +10,8 @@ class RepairsController < ApplicationController
 
   def new
     @repair = Repair.new
+    @client = Client.new
+    @phone = PhoneModel.new
   end
 
   def create
@@ -37,7 +39,7 @@ class RepairsController < ApplicationController
   end
 
   def repair_params
-    params.require(:repair).permit(:phone_model_id, :client_id, :status, :imei, :servicemac_id, :max_price, :cost, :price, :deadline,)
+    params.require(:repair).permit(:phone_model_id, :client_id, :status, :imei, :servicemac_id, :max_price, :cost, :price, :deadline)
   end
 
 end
