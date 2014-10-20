@@ -31,6 +31,10 @@ class RepairsController < ApplicationController
     @repair.destroy
   end
 
+  def date
+    self.Date.commercial
+  end
+
 
   private
 
