@@ -1,12 +1,11 @@
+<div>
+  <%= simple_form_for(@repair) do |repair| %>
 
-<%= simple_form_for(@repair) do |repair| %>
+    <%= repair.input :imei, placeholder: '000000000000' %>
+    <%= repair.input :description %>
+    <%= repair.input :max_price %>
+    <%= repair.input :deadline, as: :string, input_html: { class: "datepicker" } %>
 
-  <%= repair.input :imei, placeholder: '000000000000' %>
-  <%= repair.input :description %>
-  <%= repair.input :max_price %>
-  <%= repair.input :deadline %>
-  <%= repair.input :status %>
-
-  <%= repair.button :submit %>
-
-<% end %>
+    <%= repair.button :submit %>
+  <% end %>
+</div>

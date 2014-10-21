@@ -1,11 +1,13 @@
-<h2>Phone</h2>
-<%= simple_form_for(@phone) do |phone| %>
+<div>
+  <h2>Phone</h2>
+  <%= simple_form_for(@phone) do |phone| %>
 
-  <%= phone.input :name %>
-  <%= phone.input :name do %>
-    <%= phone.select :name, PhoneModel.all %>
+    <%= phone.input :name do %>
+      <%= phone.select :name, PhoneModel.all %>
+    <% end %>
+    <%= phone.input :name %>
+
+    <%= phone.button :submit %>
+
   <% end %>
-
-  <%= phone.button :submit %>
-
-<% end %>
+</div>

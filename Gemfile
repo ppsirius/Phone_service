@@ -46,3 +46,7 @@ gem 'pg', group: :production
 gem 'rails_12factor', group: :production
 gem 'state_machine'
 gem 'simple_form'
+
+
+gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
+                              :git => 'git://github.com/Nerian/bootstrap-datepicker-rails.git'
