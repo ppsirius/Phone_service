@@ -1,7 +1,9 @@
-<div>
-  <div><%= render 'phone', :object => @phone %></div>
+<%= content_tag :div, class: "pull-left margin_right" do -%>
+  <div><%= render 'phone' %></div>
   <div><%= render 'repair' %></div>
-</div>
-<div><%= render 'client' %></div>
+<% end -%>
 
+<%= content_tag :div, class: "pull-left" do -%>
+  <%= render 'client' %>
+<% end -%>
 

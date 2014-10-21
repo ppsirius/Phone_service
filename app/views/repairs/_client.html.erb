@@ -1,0 +1,15 @@
+<h2>Client</h2>
+<%= simple_form_for(@client) do |client| %>
+
+  <%= client.input :last_name do %>
+    <%= client.select :last_name, Client.all %>
+  <% end %>
+
+  <%= client.input :last_name %>
+  <%= client.input :first_name %>
+  <%= client.input :phone_number %>
+  <%= client.input :email %>
+
+  <%= client.button :submit %>
+
+<% end %>
