@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
   resources :repairs
+  resources :clients
+  resources :phone_models
  
   root 'repairs#index'
 

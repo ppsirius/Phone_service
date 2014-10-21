@@ -1,8 +1,7 @@
 <%= simple_form_for(@phone) do |phone| %>
 
-<%= f.input :name do %>
-   <%= f.select :name, PhoneModel.all %>
- <% end %>
+
+  <%= phone.input :name %>
 
   <%= phone.button :submit %>
 

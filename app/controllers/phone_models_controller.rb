@@ -37,5 +37,6 @@ class PhoneModelsController < ApplicationController
   end
 
   def phone_model_params
-    params
+    params.require(:phone_model).permit(:name)
+  end
 end
