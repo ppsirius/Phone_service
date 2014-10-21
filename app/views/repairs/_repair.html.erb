@@ -1,14 +1,11 @@
 
 <%= simple_form_for(@repair) do |repair| %>
 
-  <%= repair.input :status %>
   <%= repair.input :imei, placeholder: '000000000000' %>
-  <%= repair.input :serviceman_id%>
   <%= repair.input :description %>
   <%= repair.input :max_price %>
-  <%= repair.input :costs %>
-  <%= repair.input :price %>
   <%= repair.input :deadline %>
+  <%= repair.input :status %>
 
   <%= repair.button :submit %>
 

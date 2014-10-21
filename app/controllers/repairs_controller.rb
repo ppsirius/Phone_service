@@ -2,7 +2,7 @@ class RepairsController < ApplicationController
   before_action :set_repair, only: [:show, :edit, :update, :destroy]
 
   def index
-    @repairs = Repair.all
+    @repairs = Repair.order(:deadline)
   end
 
   def show

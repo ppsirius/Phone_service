@@ -1,13 +1,13 @@
 <table class="table table-hover table-bordered">
   <thead>
     <tr>
-      <th>Create date</th>
+      <th>Created date</th>
       <th>Deadline</th>
       <th>Phone model</th>
       <th>Client</th>
       <th>Description</th>
       <th>Status</th>
-      
+      <th>Price</th>
     </tr>
   </thead>
 
@@ -20,8 +20,8 @@
         <td><%= repair.client.full_name %></td>
         <td><%= repair.description %></td>
         <td><%= repair.status %></td>
-        
-        
+        <td><%= repair.price %></td>
+               
 
         <td><%= link_to 'Show', repair %></td>
         <td><%= link_to 'Edit', edit_repair_path(repair) %></td>
