@@ -42,6 +42,7 @@ group :test, :development do
 end
 
 gem 'pg', group: :production
+gem 'unicorn'
 
 gem 'rails_12factor', group: :production
 gem 'state_machine'
