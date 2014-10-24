@@ -1,7 +1,25 @@
-<p>
-  <strong>Deadline</strong>
-  <%= @repair.deadline %>
-</p>
+<h2>Phone model</h2>
+  <%= @repair.phone_model_id %>
 
+<h2>Client</h2>
+  <%= @repair.client_id %>  
+
+<h2>Repair</h2>
+  <%= @repair.imei %><br>
+  <%= @repair.status %><br> 
+  <%= @repair.serviceman_id %><br> 
+  <%= @repair.description %><br>   
+  <%= @repair.description_service %><br> 
+  <%= @repair.description_client %><br> 
+  <%= @repair.max_price %><br> 
+  <%= @repair.deadline %><br> 
+  <%= @repair.relased %><br> 
+  
+  <%= simple_form_for @repair do |repair| %>
+    <%= repair :imei %>
+
+  <% end %>
+
+  <br>
 <%= link_to 'Edit', edit_repair_path(@repair) %> |
 <%= link_to 'Back', repairs_path %>

@@ -10,6 +10,8 @@ class RepairsController < ApplicationController
 
   def new
     @repair = Repair.new
+    @repair.relased ||= false
+    
     @client = Client.new
     @phone = PhoneModel.new
   end
