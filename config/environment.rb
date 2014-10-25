@@ -6,5 +6,3 @@ Rails.application.initialize!
 
 
 
-Time::DATE_FORMATS[:my_date] = "%d/%m/%Y"
-

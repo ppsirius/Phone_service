@@ -14,8 +14,8 @@
   <tbody>
     <% @repairs.each do |repair| %>
       <tr>
-        <td><%= repair.created_at.to_s(:my_date) %></td>
-        <td><%= repair.deadline.strftime("%d/%m/%Y") %></td>
+        <td><%= simple_date(repair.created_at) %></td>
+        <td><%= simple_date(repair.deadline) %></td>
         <td><%= repair.phone_model.name %></td>
         <td><%= repair.client.full_name %></td>
         <td><%= repair.description %></td>

@@ -13,7 +13,7 @@ class RepairsController < ApplicationController
     @repair.relased ||= false
     
     @client = Client.new
-    @phone = PhoneModel.new
+    @phone_model = PhoneModel.new
   end
 
   def create
@@ -22,8 +22,10 @@ class RepairsController < ApplicationController
     if @repair.save
       redirect_to @repair, notice: 'Repair was successfully created.'
     else 
+      @phone_model = PhoneModel.new #to do implements
+      @client = Client.new #to do implements
       render :new
-    end
+      end
   end
 
   def edit
@@ -45,7 +47,7 @@ class RepairsController < ApplicationController
   end
 
   def repair_params
-    params.require(:repair).permit(:phone_model_id, :client_id, :status, :imei, :servicemac_id, :max_price, :cost, :price, :deadline, :description_service, :description_client, :relased)
+    params.require(:repair).permit(:phone_model_id, :client_id, :status, :imei, :servicemac_id, :max_price, :cost, :price, :deadline, :description, :description_service, :description_client, :relased)
   end
 
 end

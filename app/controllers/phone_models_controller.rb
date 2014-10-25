@@ -16,9 +16,9 @@ class PhoneModelsController < ApplicationController
     @phone_model = PhoneModel.new(phone_model_params)
 
     if @phone_model.save
-      redirect_to @phone_model, notice: 'Phone model was successfully created.'
-    else 
-      render :new
+      head :created
+    else
+      render json:@phone_model.errors.full_messages, status: :unprocessable_entity
     end
   end
 

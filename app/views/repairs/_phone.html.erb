@@ -1,14 +1,9 @@
 <div>
   <h2>Phone</h2>
-  <%= simple_form_for(@phone) do |phone| %>
-
-    <%= phone.input :name do %>
-      <%= phone.select :name, PhoneModel.all %>
-    <% end %>
+  <%= simple_form_for @phone_model, :remote => true do |phone| %>
     <%= phone.input :name %>
-
+    <%= phone.error :name %>
     <%= phone.button :submit, class: 'btn btn-success'%>
-
   <% end %>
 </div>
 <br>
