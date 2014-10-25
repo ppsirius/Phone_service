@@ -5,6 +5,9 @@ class Repair < ActiveRecord::Base
 
   validates :phone_model, :client, :status, :imei, :description,  presence: true
 
+  attr_accessor :tag_list_array
+  acts_as_taggable # basic usage - gives us 'tags'
+
   state_machine :status, :initial => :in_repair do 
 
     event :fix do 
@@ -18,6 +21,10 @@ class Repair < ActiveRecord::Base
     event :cant_repair do 
       transition :in_repaire => :not_repairable, :sent_to_service => :not_repairable
     end
+  end
+
+  def tag_list_array=(tags)
+    self.tag_list += tags.join(",")
   end
 
 end

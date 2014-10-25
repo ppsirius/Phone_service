@@ -1,6 +1,7 @@
 class RepairsController < ApplicationController
   before_action :set_repair, only: [:show, :edit, :update, :destroy]
 
+
   def index
     @repairs = Repair.order(:deadline)
   end
@@ -40,6 +41,7 @@ class RepairsController < ApplicationController
   end
 
 
+
   private
 
   def set_repair
@@ -47,7 +49,7 @@ class RepairsController < ApplicationController
   end
 
   def repair_params
-    params.require(:repair).permit(:phone_model_id, :client_id, :status, :imei, :servicemac_id, :max_price, :cost, :price, :deadline, :description, :description_service, :description_client, :relased)
+    params.require(:repair).permit(:phone_model_id, :client_id, :status, :imei, :servicemac_id, :max_price, :cost, :price, :deadline, :description, :description_service, :description_client, :relased, :tag_list_array => [])
   end
 
 end

@@ -17,6 +17,10 @@
     <div  class="field_border"><%= @repair.serviceman_id %></div>
   </div>
   <div class="form-group string required phone_model_name">
+    <label class="string required control-label">Tags</label>
+    <div  class="field_border"><%= @repair.tag_list %></div>
+  </div>
+  <div class="form-group string required phone_model_name">
     <label class="string required control-label">Created at</label>
     <div  class="field_border"><%= simple_date(@repair.created_at) %></div>
   </div>

@@ -5,6 +5,8 @@
     <%= repair.input :phone_model_id, :collection => PhoneModel.all, :label_method => :name, :value_method => :id %>
     <%= repair.input :client_id, :collection => Client.all, :label_method => :full_name, :value_method => :id %>
     <%= repair.input :imei, placeholder: '000000000000' %>
+    <%= repair.input :tag_list_array, :as => :check_boxes, :collection => ['screen', 'simlock', 'language', 'soft'], :label => "Description" %>
+    <%#= repair.input :tag_list, label: false, placeholder: 'Other descriptions (separated by commas)' %>
     <%= repair.input :description %>
     <%= repair.input :description_service %>
     <%= repair.input :description_client %>

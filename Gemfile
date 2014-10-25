@@ -53,3 +53,4 @@ gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
 
 gem "font-awesome-rails"
 gem 'devise'
+gem 'acts-as-taggable-on', '~> 3.4'

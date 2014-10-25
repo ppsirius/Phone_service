@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  devise_for :users
   resources :repairs
   resources :clients
   resources :phone_models
