@@ -5,7 +5,8 @@ class Repair < ActiveRecord::Base
 
   validates :phone_model, :client, :status, :imei, :description,  presence: true
 
-  attr_accessor :tag_list_array
+  attr_accessor :tag_list_array, :tag_list_string
+
   acts_as_taggable # basic usage - gives us 'tags'
 
   state_machine :status, :initial => :in_repair do 
@@ -25,6 +26,12 @@ class Repair < ActiveRecord::Base
 
   def tag_list_array=(tags)
     self.tag_list += tags.join(",")
+    logger.info "XXX #{tag_list}"
+  end
+
+  def tag_list_string=(tags)
+    self.tag_list += tags
+    logger.info "XXX #{tag_list}"
   end
 
 end
