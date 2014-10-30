@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141025135811) do
+ActiveRecord::Schema.define(version: 20141030140418) do
 
   create_table "clients", force: true do |t|
     t.string   "last_name"
@@ -34,11 +34,10 @@ ActiveRecord::Schema.define(version: 20141025135811) do
     t.string   "status"
     t.integer  "imei"
     t.integer  "serviceman_id"
-    t.text     "description",         limit: 255
     t.integer  "max_price"
     t.integer  "costs"
     t.integer  "price"
-    t.date     "deadline"
+    t.datetime "deadline"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "description_service"
