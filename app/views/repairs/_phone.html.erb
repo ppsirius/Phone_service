@@ -1,10 +1,8 @@
-<div>
-  <h2>Phone</h2>
+<div id="new_phone">
+  <h4>New model</h4>
   <%= simple_form_for @phone_model, :remote => true do |phone| %>
     <%= phone.input :name %>
     <%= phone.error :name %>
     <%= phone.button :submit, class: 'btn btn-success'%>
   <% end %>
 </div>
-<br>
-<br>

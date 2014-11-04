@@ -1,9 +1,11 @@
 <div>
   <%= simple_form_for(@repair) do |repair| %>
-
-
-    <%= repair.input :phone_model_id, :collection => PhoneModel.all, :label_method => :name, :value_method => :id %>
-    <%= repair.input :client_id, :collection => Client.all, :label_method => :full_name, :value_method => :id %>
+    <h2>Phone</h2>
+    <%= repair.input :phone_model_id,  label: false, :collection => PhoneModel.all, :label_method => :name, :value_method => :id %>
+    <a href="#" class="button small" id="add_phone">Add new phone model</a>
+    <h2>Client</h2>
+    <%= repair.input :client_id, label: false, :collection => Client.all, :label_method => :full_name, :value_method => :id %>
+    <a href="#" class="button small" id="add_client">Add new client</a>
     <%= repair.input :imei, placeholder: '000000000000' %>
     <%= repair.input :tag_list_array, :as => :check_boxes, :collection => ['screen', 'simlock', 'language', 'soft'], :label => "Description" %>
     <%= repair.input :tag_list_string, label: false, placeholder: 'Other descriptions (separated by commas)' %>

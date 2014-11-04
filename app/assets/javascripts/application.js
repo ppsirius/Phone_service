@@ -10,12 +10,19 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
 //= require jquery
-//= require jquery_ujs
-//= require foundation
 //= require_tree .
+//= require jquery_ujs
+//= require dataTables/jquery.dataTables
+
+//= require foundation
 //= require bootstrap-datepicker
 //= require bootstrap-datepicker/core
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.es.js
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.fr.js
+
+
 $(function(){ $(document).foundation(); });
+
+
