@@ -3,7 +3,7 @@ class Repair < ActiveRecord::Base
   belongs_to :phone_model
   belongs_to :client
 
-  validates :phone_model, :client, :status, :imei, :description,  presence: true
+  validates :phone_model, :client, :status, :imei, presence: true
 
   attr_accessor :tag_list_array, :tag_list_string
 
